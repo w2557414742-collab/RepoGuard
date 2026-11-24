@@ -5,11 +5,11 @@
 | 验收项 | 2026-11-24 状态 |
 |---|---|
 | 本地仓库 | 已初始化，路径为当前 RepoGuard 工作区 |
-| 当前分支 | `main`，尚无首个提交 |
-| 本地最新 SHA | 暂无。未产生可供远端核对的 commit |
-| 工作区 | 自有源码、测试、文档和实验工件为发布候选。索引数据库、缓存、环境和第三方克隆已被忽略 |
+| 当前分支 | `main` |
+| 已复核的源码提交 | `46c03d33d7212f914575cfb715c8ee2ce3ca3fb1`。当前工作区最新提交可用 `git rev-parse HEAD` 查得 |
+| 工作区 | 165 个文件进入本地首次提交，包含自有源码、测试、文档、锁文件和实验工件 |
 | 远程仓库 | 未配置远程 |
-| 所属账号与 URL | BLOCKED，等待 GitHub CLI 登录并确认账号及目标仓库 |
+| 所属账号与 URL | BLOCKED。现有 GitHub CLI 会话返回 HTTP 401，需重新认证后核实账号及仓库 |
 | 私有可见性、默认分支和推送 SHA | NOT_RUN |
 | GitHub 展示、文件完整性、远端 CI 与安全扫描 | NOT_RUN |
 | 本地安全审计 | 见 [SECURITY_AUDIT.md](SECURITY_AUDIT.md) |
@@ -17,17 +17,17 @@
 
 ## 用户本人完成登录
 
-本环境未找到 GitHub CLI，无法确认当前 GitHub 登录状态。Windows 支持以下安装方式。重开终端后由用户完成浏览器登录。
+已从官方发行包校验并准备便携版 GitHub CLI 2.105.0。现有会话返回 HTTP 401，用户可在当前工作区使用该程序重新登录。无需发送令牌。
 
 ```powershell
-winget install --id GitHub.cli --exact --source winget
-gh --version
-gh auth login --hostname github.com --web --git-protocol https
-gh auth status --hostname github.com
-gh api user --jq .login
+Set-Location D:/ai-project/RepoGuard
+$gh = (Resolve-Path .benchmark/release-tools/gh.exe).Path
+& $gh auth login --hostname github.com --web --git-protocol https
+& $gh auth status --hostname github.com
+& $gh api user --jq .login
 ```
 
-如果没有 WinGet，可从官方发行页安装 MSI。浏览器登录由账户持有人自行完成。 [GitHub CLI 安装包](https://github.com/cli/cli/releases/latest) [登录手册](https://cli.github.com/manual/gh_auth_login)
+其他 Windows 工作区可运行 `winget install --id GitHub.cli --exact --source winget`。也可从发行页安装 MSI。浏览器登录由账户持有人自行完成。 [GitHub CLI 官方发行](https://github.com/cli/cli/releases/tag/v2.105.0) [登录手册](https://cli.github.com/manual/gh_auth_login)
 
 ## 授权后执行的发布命令
 
@@ -38,19 +38,13 @@ Set-Location D:/ai-project/RepoGuard
 git status --short --branch
 git remote -v
 git ls-files -ci --exclude-standard
-git add -- .
-git diff --cached --check
-git diff --cached --name-status
 $scanner = ".\.benchmark\release-tools\gitleaks.exe"
-& $scanner git . --staged --redact=100
-if ($LASTEXITCODE -ne 0) { throw "Review the staged secret scan before committing" }
-git commit -m "Prepare RepoGuard source and release evidence"
 & $scanner git . --log-opts=--all --redact=100
 if ($LASTEXITCODE -ne 0) { throw "Review the history secret scan before pushing" }
-gh auth setup-git
-$owner = gh api user --jq .login
-gh repo create "$owner/RepoGuard" --private --source . --remote origin
-gh repo view "$owner/RepoGuard" --json url,owner,visibility
+& $gh auth setup-git --hostname github.com
+$owner = & $gh api user --jq .login
+& $gh repo create "$owner/RepoGuard" --private --source . --remote origin
+& $gh repo view "$owner/RepoGuard" --json url,owner,visibility
 # 确认 visibility 为 PRIVATE、账号正确并且 origin 与目标一致后再推送。
 git push -u origin main
 ```
@@ -60,8 +54,8 @@ git push -u origin main
 ```powershell
 $actual = git rev-parse HEAD
 git ls-remote origin refs/heads/main
-gh repo view --json url,owner,visibility,defaultBranchRef
-gh run list --branch main --commit $actual --limit 5
+& $gh repo view --json url,owner,visibility,defaultBranchRef
+& $gh run list --branch main --commit $actual --limit 5
 git status --short --branch
 ```
 

@@ -2,22 +2,23 @@
 
 按普通文件逻辑字节数统计当前工作区，包括 Git、环境、缓存和实验克隆。忽略重解析点、访问失败项及本报告自身。硬链接按路径计数。候选清单使用 Git 的跟踪和忽略规则。
 
-- 本地合计 874,661,151 B (834.14 MiB)，文件 24,304。
-- Git 已跟踪 0 个路径，现有文件 0 B (0.00 MiB)。
-- 可提交内容 163 个文件，2,497,020 B (2.38 MiB)，本报告另计。
-- 本地 refs 可达 blob 0 个，其中 ≥1 MiB 的对象 0 个。
+- 本地合计 927,560,358 B (884.59 MiB)，文件 25,490。
+- Git 已跟踪 165 个路径，现有文件 2,497,635 B (2.38 MiB)。
+- 可提交内容 164 个文件，2,497,635 B (2.38 MiB)，本报告另计。
+- 本地 refs 可达 blob 165 个，其中 ≥1 MiB 的对象 1 个。
 - 跳过路径 0，重复计算额外不可读文件 0。
-- 内容完全相同的重复组 976，按每组保留一份估算冗余 13,031,742 B (12.43 MiB)。
+- 内容完全相同的重复组 1,155，按每组保留一份估算冗余 19,907,248 B (18.99 MiB)。
 
 ## 一级目录
 
 | 目录 | 本地大小 |
 |---|---:|
 | `frontend` | 424,480,230 B (404.82 MiB) |
+| `.benchmark` | 243,091,787 B (231.83 MiB) |
 | `.venv` | 209,867,823 B (200.15 MiB) |
-| `.benchmark` | 190,764,375 B (181.93 MiB) |
 | `.repoguard` | 46,415,872 B (44.27 MiB) |
 | `artifacts` | 1,917,923 B (1.83 MiB) |
+| `.git` | 597,471 B (0.57 MiB) |
 | `src` | 469,975 B (0.45 MiB) |
 | `build` | 157,829 B (0.15 MiB) |
 | `tests` | 142,363 B (0.14 MiB) |
@@ -25,7 +26,6 @@
 | `dist` | 54,145 B (0.05 MiB) |
 | `.hypothesis` | 44,132 B (0.04 MiB) |
 | `scripts` | 37,734 B (0.04 MiB) |
-| `.git` | 26,291 B (0.03 MiB) |
 | `benchmarks` | 19,855 B (0.02 MiB) |
 | `.ruff_cache` | 11,166 B (0.01 MiB) |
 | `infra` | 3,106 B (0.00 MiB) |
@@ -38,6 +38,7 @@
 | 路径 | 大小 |
 |---|---:|
 | `.repoguard/click.sqlite` | 46,415,872 B (44.27 MiB) |
+| `.benchmark/release-tools/gh.exe` | 41,905,976 B (39.96 MiB) |
 | `frontend/.npm-cache/_cacache/content-v2/sha512/1d/15/cd0379a7e5fe047f00102e1b79f6817b0f04df0862dcdd0e61f893fef29f0843a1e9511cebc9323802a7d5587f1cfbc3bc3bf7184f3fea42edb3104f5900` | 39,041,559 B (37.23 MiB) |
 | `.venv/Scripts/ruff.exe` | 26,961,712 B (25.71 MiB) |
 | `.benchmark/mvp.sqlite` | 22,949,888 B (21.89 MiB) |
@@ -66,23 +67,22 @@
 | `frontend/.npm-cache/_cacache/content-v2/sha512/0f/c5/c6d536d81936bca8a69ef989ca1028684f021d6574aa22b67939e049272fe79d23c2a8a39615ed934df907fc5b5a6144b8ea1236e460e44b66c118b32c2a` | 6,766,845 B (6.45 MiB) |
 | `frontend/node_modules/typescript/lib/_tsc.js` | 6,172,356 B (5.89 MiB) |
 | `.venv/Lib/site-packages/pydantic_core/_pydantic_core.cp313-win_amd64.pyd` | 5,780,480 B (5.51 MiB) |
-| `frontend/node_modules/monaco-editor/min/vs/language/typescript/tsWorker.js` | 5,749,518 B (5.48 MiB) |
 
 ## 最大的 20 个目录
 
 | 路径 | 大小 |
 |---|---:|
 | `frontend` | 424,480,230 B (404.82 MiB) |
+| `.benchmark` | 243,091,787 B (231.83 MiB) |
 | `frontend/node_modules` | 233,620,168 B (222.80 MiB) |
 | `.venv` | 209,867,823 B (200.15 MiB) |
-| `.benchmark` | 190,764,375 B (181.93 MiB) |
 | `frontend/.npm-cache` | 187,141,580 B (178.47 MiB) |
 | `frontend/.npm-cache/_cacache` | 186,994,474 B (178.33 MiB) |
 | `frontend/.npm-cache/_cacache/content-v2` | 186,801,419 B (178.15 MiB) |
 | `frontend/.npm-cache/_cacache/content-v2/sha512` | 186,801,419 B (178.15 MiB) |
 | `.venv/Lib` | 161,017,959 B (153.56 MiB) |
 | `.venv/Lib/site-packages` | 161,017,959 B (153.56 MiB) |
-| `.benchmark/release-tools` | 102,451,554 B (97.71 MiB) |
+| `.benchmark/release-tools` | 152,345,652 B (145.29 MiB) |
 | `frontend/node_modules/monaco-editor` | 98,831,340 B (94.25 MiB) |
 | `.benchmark/release-tools/python` | 60,900,028 B (58.08 MiB) |
 | `frontend/node_modules/echarts` | 60,297,703 B (57.50 MiB) |
@@ -110,18 +110,18 @@
 
 ## Git 历史大型对象
 
-本次检查的可达 Git 历史中未发现 ≥1 MiB 的 blob。
+- `cf15a6bd827675ce4eecc440b5a743c9dfd8726f` · `artifacts/click-dynamic.json` · 1,252,799 B (1.19 MiB)
 
 ## 重复组样例
 
+- 1,270,844 B (1.21 MiB) × 3，`.benchmark/release-tools/candidate-m5z4cxrr/artifacts/click-dynamic.json`、`.benchmark/release-tools/candidate-pzl08m3i/artifacts/click-dynamic.json`、`artifacts/click-dynamic.json`。
+- 1,487,178 B (1.42 MiB) × 2，`.benchmark/release-tools/candidate-m5z4cxrr/artifacts/click-baseline-coverage.json`、`.benchmark/release-tools/candidate-pzl08m3i/artifacts/click-baseline-coverage.json`。
 - 1,121,654 B (1.07 MiB) × 2，`frontend/node_modules/echarts/dist/echarts.esm.min.js`、`frontend/node_modules/echarts/dist/echarts.esm.min.mjs`。
-- 4,898 B (0.00 MiB) × 121，`.benchmark/click-full/.git/hooks/pre-rebase.sample`、`.benchmark/click-local/.git/hooks/pre-rebase.sample`、`.benchmark/click/.git/hooks/pre-rebase.sample`。
-- 4,726 B (0.00 MiB) × 121，`.benchmark/click-full/.git/hooks/fsmonitor-watchman.sample`、`.benchmark/click-local/.git/hooks/fsmonitor-watchman.sample`、`.benchmark/click/.git/hooks/fsmonitor-watchman.sample`。
-- 3,650 B (0.00 MiB) × 121，`.benchmark/click-full/.git/hooks/update.sample`、`.benchmark/click-local/.git/hooks/update.sample`、`.benchmark/click/.git/hooks/update.sample`。
-- 366,925 B (0.35 MiB) × 2，`.benchmark/click-full/.git/objects/pack/pack-76116fd2389fb05d43c3841d695b30156cf4687b.pack`、`.benchmark/click-local/.git/objects/pack/pack-76116fd2389fb05d43c3841d695b30156cf4687b.pack`。
-- 2,783 B (0.00 MiB) × 121，`.benchmark/click-full/.git/hooks/push-to-checkout.sample`、`.benchmark/click-local/.git/hooks/push-to-checkout.sample`、`.benchmark/click/.git/hooks/push-to-checkout.sample`。
-- 2,308 B (0.00 MiB) × 121，`.benchmark/click-full/.git/hooks/sendemail-validate.sample`、`.benchmark/click-local/.git/hooks/sendemail-validate.sample`、`.benchmark/click/.git/hooks/sendemail-validate.sample`。
-- 252,416 B (0.24 MiB) × 2，`.benchmark/release-tools/python/yaml/_yaml.cp313-win_amd64.pyd`、`.venv/Lib/site-packages/yaml/_yaml.cp313-win_amd64.pyd`。
+- 4,898 B (0.00 MiB) × 135，`.benchmark/click-full/.git/hooks/pre-rebase.sample`、`.benchmark/click-local/.git/hooks/pre-rebase.sample`、`.benchmark/click/.git/hooks/pre-rebase.sample`。
+- 4,726 B (0.00 MiB) × 135，`.benchmark/click-full/.git/hooks/fsmonitor-watchman.sample`、`.benchmark/click-local/.git/hooks/fsmonitor-watchman.sample`、`.benchmark/click/.git/hooks/fsmonitor-watchman.sample`。
+- 3,650 B (0.00 MiB) × 135，`.benchmark/click-full/.git/hooks/update.sample`、`.benchmark/click-local/.git/hooks/update.sample`、`.benchmark/click/.git/hooks/update.sample`。
+- 205,988 B (0.20 MiB) × 3，`.benchmark/release-tools/candidate-m5z4cxrr/artifacts/click-mutant-impact.md`、`.benchmark/release-tools/candidate-pzl08m3i/artifacts/click-mutant-impact.md`、`artifacts/click-mutant-impact.md`。
+- 2,783 B (0.00 MiB) × 135，`.benchmark/click-full/.git/hooks/push-to-checkout.sample`、`.benchmark/click-local/.git/hooks/push-to-checkout.sample`、`.benchmark/click/.git/hooks/push-to-checkout.sample`。
 
 ## 发布清单与生成边界
 

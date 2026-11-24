@@ -53,6 +53,6 @@
 | 交付 | GitHub Actions 托管运行 | NOT_RUN | 此工作区尚未建立远程。 |
 | 交付 | PostgreSQL、Redis、数据库迁移体系 | NOT_IMPLEMENTED | SQLite DDL 随源码交付。 |
 | 交付 | SWE-RepairLab 联动 | NOT_IMPLEMENTED | 现有 SDK、REST 和 MCP 可作为将来接入点。 |
-| 发布 | GitHub 私有仓库、远程 SHA 和 ChatGPT 私库连接 | BLOCKED | GitHub CLI、本人登录及发布授权待完成。 |
+| 发布 | GitHub 私有仓库、远程 SHA 和 ChatGPT 私库连接 | BLOCKED | 本地源码已提交。官方便携版 gh 可运行，现有会话返回 HTTP 401。 |
 
 证据入口为 [源码索引](FUNCTION_REFERENCE.md)、[测试报告](TEST_REPORT.md)、[实验报告](EXPERIMENT_REPORT.md) 与 [发布登记](GITHUB_PUBLISH_REPORT.md)。

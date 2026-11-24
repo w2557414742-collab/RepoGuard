@@ -6,7 +6,7 @@ RepoGuard — Repository-Level Change Impact Analysis & Verified Refactoring Pla
 
 大型代码仓库变更影响分析与验证式自动重构平台。
 
-- GitHub 地址待建立。当前分支为 `main`，尚无 Git 提交。此文件描述 2026-11-24 审计后的本地发布候选，远端版需以核实的完整 SHA 指定。 [发布状态](GITHUB_PUBLISH_REPORT.md)
+- GitHub 地址待建立。当前分支为 `main`。2026-11-24 的受审查源码基线为 `46c03d33d7212f914575cfb715c8ee2ce3ca3fb1`。后续发布状态文档可能有更新，远端版需以核实的完整 SHA 指定。 [发布状态](GITHUB_PUBLISH_REPORT.md)
 - 目录包括 `src/repoguard`、`tests`、`frontend`、`infra`、`benchmarks`、`configs`、`scripts`、`artifacts` 和 `docs`。 [实际目录树](PROJECT_TREE.txt)
 - 先读 [README](README.md)，再看 [架构](ARCHITECTURE.md)、[文件入口](FILE_GUIDE.md)、[函数索引](FUNCTION_REFERENCE.md)、[调用关系](CALL_FLOW.md)。按 [28 节课程](docs/learning/00_project_overview.md) 从 Git 固定提交、AST 和作用域学到回归与部署。
 
