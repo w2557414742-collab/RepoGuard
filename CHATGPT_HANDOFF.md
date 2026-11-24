@@ -6,7 +6,7 @@ RepoGuard — Repository-Level Change Impact Analysis & Verified Refactoring Pla
 
 大型代码仓库变更影响分析与验证式自动重构平台。
 
-- GitHub 地址待建立。当前分支为 `main`。2026-11-24 的受审查源码基线为 `46c03d33d7212f914575cfb715c8ee2ce3ca3fb1`。后续发布状态文档可能有更新，远端版需以核实的完整 SHA 指定。 [发布状态](GITHUB_PUBLISH_REPORT.md)
+- [GitHub 私有仓库](https://github.com/w2557414742-collab/RepoGuard) 已发布，默认分支为 `main`。2026-11-24 发布且通过托管 CI 的源码基线为 `36e31b3f1574f925245bc08b2212ed948eda03b4`，原始本地审计基线 `46c03d33d7212f914575cfb715c8ee2ce3ca3fb1` 保留在其历史中。审阅时可固定到 [已发布源码树](https://github.com/w2557414742-collab/RepoGuard/tree/36e31b3f1574f925245bc08b2212ed948eda03b4)。连接器对仓库的访问需单独授权。 [发布状态](GITHUB_PUBLISH_REPORT.md)
 - 目录包括 `src/repoguard`、`tests`、`frontend`、`infra`、`benchmarks`、`configs`、`scripts`、`artifacts` 和 `docs`。 [实际目录树](PROJECT_TREE.txt)
 - 先读 [README](README.md)，再看 [架构](ARCHITECTURE.md)、[文件入口](FILE_GUIDE.md)、[函数索引](FUNCTION_REFERENCE.md)、[调用关系](CALL_FLOW.md)。按 [28 节课程](docs/learning/00_project_overview.md) 从 Git 固定提交、AST 和作用域学到回归与部署。
 
@@ -20,7 +20,7 @@ RepoGuard — Repository-Level Change Impact Analysis & Verified Refactoring Pla
 
 ## 测试与基准
 
-本轮运行了项目 pytest、Ruff、Mypy、Bandit、依赖检查、端到端传输、前端构建和 Click Docker 对照。分别记录通过、发现、退出码和运行限制。Click 8.1.8 与固定父提交的索引，以及受控格式化变异和实际补丁对照均已测量。 [测试记录](TEST_REPORT.md) [实验与复现](BENCHMARK_PROTOCOL.md)
+本地 pytest 20 项通过，Ruff、依赖检查、HTTP 冒烟和前端构建通过。Mypy 34 项诊断及 Bandit 5 项中等级、43 项低等级发现仍待处理。Click 8.1.8 的全量和增量索引对照一致。GitHub 托管 CI 的 Python 3.11、Python 3.13 和 frontend 均通过。 [测试记录](TEST_REPORT.md) [实验与复现](BENCHMARK_PROTOCOL.md) [首轮托管 CI](https://github.com/w2557414742-collab/RepoGuard/actions/runs/45422632193)
 
 ## 待解决的工程问题
 

@@ -49,10 +49,10 @@
 | 重构 | 静态预检和回归 | PARTIALLY_VERIFIED | 已验证上下文、语法、公开接口与静态引用。真实 Click 改名经过 Docker 回归。类型充分性和任意补丁的语义等价仍未知。 |
 | 交付 | 架构规则、CLI、SDK、FastAPI、MCP stdio | VERIFIED | 真实传输端到端用例与 HTTP 探测。 |
 | 交付 | Docker、Compose、Vue 工作台、自动化测试 | VERIFIED | 本地生产构建、HTTP 烟测、Click Docker 对照及项目测试。 |
-| 交付 | GitHub Actions 配置 | IMPLEMENTED | 仓库发布前没有远程 CI 运行。 |
-| 交付 | GitHub Actions 托管运行 | NOT_RUN | 此工作区尚未建立远程。 |
+| 交付 | GitHub Actions 配置与托管运行 | VERIFIED | 已发布源码基线触发的 Python 3.11、Python 3.13 和 frontend 三个作业全部成功。[实际运行](https://github.com/w2557414742-collab/RepoGuard/actions/runs/45422632193) |
 | 交付 | PostgreSQL、Redis、数据库迁移体系 | NOT_IMPLEMENTED | SQLite DDL 随源码交付。 |
 | 交付 | SWE-RepairLab 联动 | NOT_IMPLEMENTED | 现有 SDK、REST 和 MCP 可作为将来接入点。 |
-| 发布 | GitHub 私有仓库、远程 SHA 和 ChatGPT 私库连接 | BLOCKED | 本地源码已提交。官方便携版 gh 可运行，现有会话返回 HTTP 401。 |
+| 发布 | GitHub 私有仓库与远端一致性 | VERIFIED | [w2557414742-collab/RepoGuard](https://github.com/w2557414742-collab/RepoGuard) 为 Private，默认分支 `main`。首次发布的 SHA 与 165 文件的 Git 树一致。 |
+| 发布 | ChatGPT 私库连接 | NOT_RUN | 仓库已建立，连接器授权及访问尚未核实。 |
 
 证据入口为 [源码索引](FUNCTION_REFERENCE.md)、[测试报告](TEST_REPORT.md)、[实验报告](EXPERIMENT_REPORT.md) 与 [发布登记](GITHUB_PUBLISH_REPORT.md)。

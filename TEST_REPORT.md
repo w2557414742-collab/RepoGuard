@@ -30,6 +30,18 @@
 | 前端生产构建 | 通过 TypeScript 检查及 Vite 构建。Monaco 分块尺寸有警告 | [frontend-build.log](artifacts/release-checks/frontend-build.log) |
 | Docstring 行为核对 | 添加 129 处中文说明。21 个核心模块去掉 Docstring 后的 AST 与原版逐项一致 | [运行收据](artifacts/release-checks/results.json) |
 | Click Docker 与回归 | 650 个用例，628 通过、21 跳过、1 个预期失败。独立变体捕获 50 个失败，三种改名方案对照复跑 | [Click 复跑](artifacts/release-checks/click-rerun.json) |
-| GitHub 托管 CI | NOT_RUN，远程仓库尚未创建 | [发布报告](GITHUB_PUBLISH_REPORT.md) |
+| GitHub 托管 CI | 正式发布后的实际结果见下节 | [发布报告](GITHUB_PUBLISH_REPORT.md) |
 
-Mypy 和 Bandit 的发现单列，运行测试没有因此计为失败。GitHub 私有发布需完成用户登录与授权。 [安全审计](SECURITY_AUDIT.md)
+Mypy 和 Bandit 的发现单列，运行测试没有因此计为失败。 [安全审计](SECURITY_AUDIT.md)
+
+## GitHub 正式发布验收
+
+源码基线 `36e31b3f1574f925245bc08b2212ed948eda03b4` 推送到 Private 仓库的 `main` 后触发 GitHub Actions，运行结论为 `success`。 [RepoGuard CI 运行 45422632193](https://github.com/w2557414742-collab/RepoGuard/actions/runs/45422632193)
+
+| 托管作业 | 实际结果 |
+|---|---|
+| Python 3.11 | 通过，包括 Ruff、源码导航检查、pytest 和 wheel 构建。 |
+| Python 3.13 | 通过，包括 Ruff、源码导航检查、pytest 和 wheel 构建。 |
+| frontend | 通过，包括 npm ci、TypeScript 校验和生产构建。 |
+
+上述运行针对源码基线。仅交接文档的后续提交会产生独立运行，可按其 SHA 查看。Mypy 和 Bandit 保持表中的诊断结果，托管流水线的成功不改变这两项结论。 [main 的 Actions 记录](https://github.com/w2557414742-collab/RepoGuard/actions?query=branch%3Amain)
