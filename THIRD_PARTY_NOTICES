@@ -1,0 +1,64 @@
+RepoGuard third-party notices
+============================
+
+RepoGuard's own project code is MIT licensed. Dependencies are acquired
+through the package manifests and distributed under their own licenses.
+No third-party repository checkout is included in the project tree.
+
+Click benchmark evidence
+------------------------
+
+Project: Pallets Click 8.1.8
+Commit: 934813e4d421071a1b3db3973c02fe2721359a6e
+Upstream:
+https://github.com/pallets/click/tree/934813e4d421071a1b3db3973c02fe2721359a6e
+
+The recorded experimental evidence includes a small Python unified diff,
+pytest excerpts, source paths and line numbers from public Click. The
+experiment checkout is generated locally from the upstream Git objects.
+Its license notice applies to the retained source excerpts:
+
+Copyright 2014 Pallets
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+1.  Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+
+2.  Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+
+3.  Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Direct dependency license references
+------------------------------------
+
+- NetworkX (BSD-3-Clause), FastAPI (MIT), Uvicorn (BSD-3-Clause),
+  PyYAML (MIT) and MCP Python SDK (MIT).
+- LibCST (MIT; separate PSF terms apply to some Python-derived files),
+  pytest (MIT), coverage.py (Apache-2.0), Hypothesis (MPL-2.0), and
+  CrossHair (consult the upstream MIT, Apache-2.0 and PSF notices).
+- Vue, Monaco Editor, Cytoscape.js, Vite and vue-tsc (MIT),
+  Apache ECharts (Apache-2.0). frontend/package-lock.json records their
+  direct and transitive dependencies and npm license metadata.
+
+The pinned source provenance and related-tool licenses are linked in
+docs/research/related_work.md. Packaging project source does not copy the
+dependencies, virtual environment, Docker layers, or model weights.

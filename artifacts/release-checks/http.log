@@ -1,0 +1,3 @@
+command: python.exe scripts/smoke_http.py
+exit: 0
+Click snapshot, search, source, graph, diff, selection, architecture, patch and benchmark passed

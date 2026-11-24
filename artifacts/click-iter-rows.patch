@@ -1,0 +1,20 @@
+--- a/src/click/formatting.py
++++ b/src/click/formatting.py
+@@ -19,7 +19,7 @@
+     return tuple(y for x, y in sorted(widths.items()))
+ 
+ 
+-def iter_rows(
++def aligned_rows(
+     rows: t.Iterable[t.Tuple[str, str]], col_count: int
+ ) -> t.Iterator[t.Tuple[str, ...]]:
+     for row in rows:
+@@ -228,7 +228,7 @@
+ 
+         first_col = min(widths[0], col_max) + col_spacing
+ 
+-        for first, second in iter_rows(rows, len(widths)):
++        for first, second in aligned_rows(rows, len(widths)):
+             self.write(f"{'':>{self.current_indent}}{first}")
+             if not second:
+                 self.write("\n")

@@ -1,0 +1,36 @@
+[
+  {
+    "function": "bounded_step",
+    "status": "INCONCLUSIVE",
+    "exit": 0,
+    "seconds": 2.5674427999183536,
+    "output": "D:\\ai-project\\RepoGuard\\benchmarks\\contracts\\risk_contracts.py:6: info: Not confirmed.",
+    "command": [
+      "crosshair",
+      "check",
+      "benchmarks.contracts.risk_contracts.bounded_step",
+      "--report_all",
+      "--per_condition_timeout",
+      "2",
+      "--per_path_timeout",
+      "0.5"
+    ]
+  },
+  {
+    "function": "reversed_uncertainty",
+    "status": "FOUND_COUNTEREXAMPLE",
+    "exit": 1,
+    "seconds": 0.4273827000288293,
+    "output": "D:\\ai-project\\RepoGuard\\benchmarks\\contracts\\risk_contracts.py:13: error: false when calling reversed_uncertainty(1.0) (which returns 0.86)",
+    "command": [
+      "crosshair",
+      "check",
+      "benchmarks.contracts.risk_contracts.reversed_uncertainty",
+      "--report_all",
+      "--per_condition_timeout",
+      "2",
+      "--per_path_timeout",
+      "0.5"
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+command: python.exe -m mypy src/repoguard --cache-dir .benchmark/release-tools/mypy-cache
+exit: 1
+src\repoguard\graph.py:9: error: Library stubs not installed for "networkx"  [import-untyped]
+src\repoguard\graph.py:9: note: Hint: "python3 -m pip install types-networkx"
+src\repoguard\parser.py:156: error: "AST" has no attribute "end_col_offset"  [attr-defined]
+src\repoguard\parser.py:180: error: "AST" has no attribute "lineno"  [attr-defined]
+src\repoguard\parser.py:181: error: "AST" has no attribute "col_offset"  [attr-defined]
+src\repoguard\parser.py:184: error: Unsupported operand types for - ("None" and "int")  [operator]
+src\repoguard\parser.py:184: note: Left operand is of type "int | None"
+src\repoguard\parser.py:469: error: Incompatible types in assignment (expression has type "Callable[[MatchAs], None]", base class "NodeVisitor" defined the type as "Callable[[MatchStar], Any]")  [assignment]
+src\repoguard\impact.py:228: error: Invalid index type "str | None" for "dict[str, float]"; expected type "str"  [index]
+src\repoguard\impact.py:236: error: Argument 2 to "Finding" has incompatible type "str | None"; expected "str"  [arg-type]
+src\repoguard\architecture.py:36: error: Library stubs not installed for "yaml"  [import-untyped]
+src\repoguard\architecture.py:36: note: Hint: "python3 -m pip install types-PyYAML"
+src\repoguard\architecture.py:36: note: (or run "mypy --install-types" to install all missing stub packages)
+src\repoguard\architecture.py:36: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+src\repoguard\architecture.py:140: error: Incompatible types in assignment (expression has type "str", variable has type "Symbol")  [assignment]
+src\repoguard\architecture.py:140: error: Incompatible types in assignment (expression has type "list[Edge]", variable has type "tuple[Edge, ...]")  [assignment]
+src\repoguard\architecture.py:148: error: Incompatible types in assignment (expression has type "tuple[str, Symbol, str]", variable has type "tuple[str, str, str]")  [assignment]
+src\repoguard\verification.py:152: error: Argument 1 to "add" of "set" has incompatible type "str | None"; expected "str"  [arg-type]
+src\repoguard\verification.py:153: error: Argument 1 to "get" of "dict" has incompatible type "str | None"; expected "str"  [arg-type]
+src\repoguard\verification.py:160: error: List item 0 has incompatible type "File | None"; expected "File"  [list-item]
+src\repoguard\verification.py:165: error: Argument 1 to "pop" of "dict" has incompatible type "str | None"; expected "str"  [arg-type]
+src\repoguard\verification.py:170: error: Argument 1 to "File" has incompatible type "str | None"; expected "str"  [arg-type]
+src\repoguard\verification.py:176: error: Invalid index type "str | None" for "dict[str, Unit]"; expected type "str"  [index]
+src\repoguard\test_selection.py:58: error: Incompatible types in assignment (expression has type "Symbol | None", variable has type "Symbol")  [assignment]
+src\repoguard\sandbox.py:52: error: "BinaryIO" has no attribute "read1"  [attr-defined]
+src\repoguard\sandbox.py:66: error: Argument 2 to "submit" of "Executor" has incompatible type "IO[bytes]"; expected "BinaryIO"  [arg-type]
+src\repoguard\sandbox.py:67: error: Argument 2 to "submit" of "Executor" has incompatible type "IO[bytes]"; expected "BinaryIO"  [arg-type]
+src\repoguard\sandbox.py:68: error: Argument 2 to "submit" of "Executor" has incompatible type "IO[bytes]"; expected "BinaryIO"  [arg-type]
+src\repoguard\sandbox.py:216: error: Expected iterable as variadic argument  [misc]
+src\repoguard\sandbox.py:220: error: Argument 4 to "CoverageMap" has incompatible type "object"; expected "dict[str, dict[str, list[int]]]"  [arg-type]
+src\repoguard\sandbox.py:236: error: Argument 6 to "TestRun" has incompatible type "object"; expected "list[str]"  [arg-type]
+src\repoguard\sandbox.py:237: error: Argument 7 to "TestRun" has incompatible type "object"; expected "list[str]"  [arg-type]
+src\repoguard\indexer.py:192: error: Argument 9 to "Snapshot" has incompatible type "dict[str, float | list[dict[str, Any]] | list[dict[str, list[list[int]] | str | None]] | list[str] | dict[Confidence, int] | int | dict[str, int] | str | None]"; expected "dict[str, object]"  [arg-type]
+src\repoguard\indexer.py:192: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+src\repoguard\indexer.py:192: note: Consider using "Mapping" instead, which is covariant in the value type
+src\repoguard\refactoring.py:168: error: Argument 1 to "Arg" has incompatible type "BaseExpression | None"; expected "BaseExpression"  [arg-type]
+src\repoguard\refactoring.py:361: error: Incompatible types in assignment (expression has type "Unit | None", variable has type "Unit")  [assignment]
+src\repoguard\refactoring.py:394: error: Incompatible types in assignment (expression has type "int", variable has type "set[tuple[int, int]]")  [assignment]
+src\repoguard\import_migration.py:61: error: Argument 1 to "get_full_name_for_node" has incompatible type "Attribute | Name | None"; expected "str | CSTNode"  [arg-type]
+src\repoguard\import_migration.py:228: error: Incompatible types in assignment (expression has type "Unit | None", variable has type "Unit")  [assignment]
+src\repoguard\mcp_server.py:59: error: "object" has no attribute "__iter__"; maybe "__dir__" or "__str__"? (not iterable)  [attr-defined]
+Found 34 errors in 11 files (checked 21 source files)

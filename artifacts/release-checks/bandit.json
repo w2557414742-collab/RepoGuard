@@ -1,0 +1,458 @@
+{
+  "version": "1.9.4",
+  "exit": 1,
+  "scope": [
+    "src",
+    "scripts",
+    "infra",
+    "benchmarks"
+  ],
+  "metrics": {
+    "CONFIDENCE.HIGH": 45,
+    "CONFIDENCE.LOW": 0,
+    "CONFIDENCE.MEDIUM": 3,
+    "CONFIDENCE.UNDEFINED": 0,
+    "SEVERITY.HIGH": 0,
+    "SEVERITY.LOW": 43,
+    "SEVERITY.MEDIUM": 5,
+    "SEVERITY.UNDEFINED": 0,
+    "loc": 5099,
+    "nosec": 0,
+    "skipped_tests": 0
+  },
+  "issues": [
+    {
+      "filename": "benchmarks\\run_click.py",
+      "line_number": 10,
+      "test_id": "B404",
+      "test_name": "blacklist",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Consider possible security implications associated with the subprocess module."
+    },
+    {
+      "filename": "benchmarks\\run_click.py",
+      "line_number": 155,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "benchmarks\\run_click.py",
+      "line_number": 180,
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Starting a process with a partial executable path"
+    },
+    {
+      "filename": "benchmarks\\run_click.py",
+      "line_number": 180,
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "subprocess call - check for execution of untrusted input."
+    },
+    {
+      "filename": "benchmarks\\run_click.py",
+      "line_number": 200,
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Starting a process with a partial executable path"
+    },
+    {
+      "filename": "benchmarks\\run_click.py",
+      "line_number": 200,
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "subprocess call - check for execution of untrusted input."
+    },
+    {
+      "filename": "infra\\runner_entry.py",
+      "line_number": 2,
+      "test_id": "B404",
+      "test_name": "blacklist",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Consider possible security implications associated with the subprocess module."
+    },
+    {
+      "filename": "infra\\runner_entry.py",
+      "line_number": 18,
+      "test_id": "B108",
+      "test_name": "hardcoded_tmp_directory",
+      "issue_severity": "MEDIUM",
+      "issue_confidence": "MEDIUM",
+      "issue_text": "Probable insecure usage of temp file/directory."
+    },
+    {
+      "filename": "infra\\runner_entry.py",
+      "line_number": 22,
+      "test_id": "B108",
+      "test_name": "hardcoded_tmp_directory",
+      "issue_severity": "MEDIUM",
+      "issue_confidence": "MEDIUM",
+      "issue_text": "Probable insecure usage of temp file/directory."
+    },
+    {
+      "filename": "infra\\runner_entry.py",
+      "line_number": 41,
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "subprocess call - check for execution of untrusted input."
+    },
+    {
+      "filename": "infra\\service_entry.py",
+      "line_number": 12,
+      "test_id": "B104",
+      "test_name": "hardcoded_bind_all_interfaces",
+      "issue_severity": "MEDIUM",
+      "issue_confidence": "MEDIUM",
+      "issue_text": "Possible binding to all interfaces."
+    },
+    {
+      "filename": "scripts\\generate_source_guide.py",
+      "line_number": 7,
+      "test_id": "B404",
+      "test_name": "blacklist",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Consider possible security implications associated with the subprocess module."
+    },
+    {
+      "filename": "scripts\\generate_source_guide.py",
+      "line_number": 19,
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Starting a process with a partial executable path"
+    },
+    {
+      "filename": "scripts\\generate_source_guide.py",
+      "line_number": 19,
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "subprocess call - check for execution of untrusted input."
+    },
+    {
+      "filename": "scripts\\package_audit.py",
+      "line_number": 8,
+      "test_id": "B404",
+      "test_name": "blacklist",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Consider possible security implications associated with the subprocess module."
+    },
+    {
+      "filename": "scripts\\package_audit.py",
+      "line_number": 18,
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Starting a process with a partial executable path"
+    },
+    {
+      "filename": "scripts\\package_audit.py",
+      "line_number": 18,
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "subprocess call - check for execution of untrusted input."
+    },
+    {
+      "filename": "scripts\\research_sources.py",
+      "line_number": 6,
+      "test_id": "B404",
+      "test_name": "blacklist",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Consider possible security implications associated with the subprocess module."
+    },
+    {
+      "filename": "scripts\\research_sources.py",
+      "line_number": 43,
+      "test_id": "B310",
+      "test_name": "blacklist",
+      "issue_severity": "MEDIUM",
+      "issue_confidence": "HIGH",
+      "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected."
+    },
+    {
+      "filename": "scripts\\research_sources.py",
+      "line_number": 53,
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Starting a process with a partial executable path"
+    },
+    {
+      "filename": "scripts\\research_sources.py",
+      "line_number": 53,
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "subprocess call - check for execution of untrusted input."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 23,
+      "test_id": "B310",
+      "test_name": "blacklist",
+      "issue_severity": "MEDIUM",
+      "issue_confidence": "HIGH",
+      "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 27,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 28,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 30,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 33,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 34,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 35,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 36,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 38,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 39,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 40,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 41,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 49,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\smoke_http.py",
+      "line_number": 50,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "scripts\\verify_contracts.py",
+      "line_number": 4,
+      "test_id": "B404",
+      "test_name": "blacklist",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Consider possible security implications associated with the subprocess module."
+    },
+    {
+      "filename": "scripts\\verify_contracts.py",
+      "line_number": 25,
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "subprocess call - check for execution of untrusted input."
+    },
+    {
+      "filename": "src\\repoguard\\cli.py",
+      "line_number": 8,
+      "test_id": "B404",
+      "test_name": "blacklist",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Consider possible security implications associated with the subprocess module."
+    },
+    {
+      "filename": "src\\repoguard\\repository.py",
+      "line_number": 8,
+      "test_id": "B404",
+      "test_name": "blacklist",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Consider possible security implications associated with the subprocess module."
+    },
+    {
+      "filename": "src\\repoguard\\repository.py",
+      "line_number": 87,
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Starting a process with a partial executable path"
+    },
+    {
+      "filename": "src\\repoguard\\repository.py",
+      "line_number": 87,
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "subprocess call - check for execution of untrusted input."
+    },
+    {
+      "filename": "src\\repoguard\\sandbox.py",
+      "line_number": 8,
+      "test_id": "B404",
+      "test_name": "blacklist",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Consider possible security implications associated with the subprocess module."
+    },
+    {
+      "filename": "src\\repoguard\\sandbox.py",
+      "line_number": 40,
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "subprocess call - check for execution of untrusted input."
+    },
+    {
+      "filename": "src\\repoguard\\sandbox.py",
+      "line_number": 46,
+      "test_id": "B101",
+      "test_name": "assert_used",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+    },
+    {
+      "filename": "src\\repoguard\\sandbox.py",
+      "line_number": 125,
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Starting a process with a partial executable path"
+    },
+    {
+      "filename": "src\\repoguard\\sandbox.py",
+      "line_number": 125,
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "subprocess call - check for execution of untrusted input."
+    },
+    {
+      "filename": "src\\repoguard\\sandbox.py",
+      "line_number": 182,
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "Starting a process with a partial executable path"
+    },
+    {
+      "filename": "src\\repoguard\\sandbox.py",
+      "line_number": 182,
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true",
+      "issue_severity": "LOW",
+      "issue_confidence": "HIGH",
+      "issue_text": "subprocess call - check for execution of untrusted input."
+    }
+  ],
+  "errors": []
+}

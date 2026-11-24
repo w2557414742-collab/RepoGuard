@@ -1,0 +1,171 @@
+{
+  "commit": "934813e4d421071a1b3db3973c02fe2721359a6e",
+  "python": "3.13.5",
+  "host": "Windows-10-10.0.19045-SP0",
+  "logical_cpus": 20,
+  "workers": 4,
+  "profiled_wall_seconds": 0.9898185000056401,
+  "total_calls": 1856992,
+  "hotspots": [
+    {
+      "file": "indexer.py",
+      "line": 54,
+      "function": "index",
+      "seconds": 0.00029570000000000003,
+      "cumulative_seconds": 0.9897038,
+      "calls": 1
+    },
+    {
+      "file": "_base.py",
+      "line": 612,
+      "function": "result_iterator",
+      "seconds": 0.00024650000000000003,
+      "cumulative_seconds": 0.9481029000000001,
+      "calls": 79
+    },
+    {
+      "file": "_base.py",
+      "line": 314,
+      "function": "_result_or_cancel",
+      "seconds": 0.0009879,
+      "cumulative_seconds": 0.9133093000000001,
+      "calls": 70
+    },
+    {
+      "file": "_base.py",
+      "line": 428,
+      "function": "result",
+      "seconds": 0.0003616,
+      "cumulative_seconds": 0.8812078000000001,
+      "calls": 70
+    },
+    {
+      "file": "threading.py",
+      "line": 327,
+      "function": "wait",
+      "seconds": 0.0005209,
+      "cumulative_seconds": 0.8096119,
+      "calls": 64
+    },
+    {
+      "file": "threading.py",
+      "line": 1058,
+      "function": "join",
+      "seconds": 5.16e-05,
+      "cumulative_seconds": 0.6302063,
+      "calls": 12
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'join' of '_thread._ThreadHandle' objects>",
+      "seconds": 0.000371,
+      "cumulative_seconds": 0.6299762,
+      "calls": 12
+    },
+    {
+      "file": "threading.py",
+      "line": 1000,
+      "function": "_bootstrap",
+      "seconds": 0.00014580000000000002,
+      "cumulative_seconds": 0.6295761000000001,
+      "calls": 12
+    },
+    {
+      "file": "threading.py",
+      "line": 1027,
+      "function": "_bootstrap_inner",
+      "seconds": 0.0021633,
+      "cumulative_seconds": 0.6295552000000001,
+      "calls": 12
+    },
+    {
+      "file": "threading.py",
+      "line": 983,
+      "function": "run",
+      "seconds": 9.82e-05,
+      "cumulative_seconds": 0.6271951,
+      "calls": 12
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'get' of '_queue.SimpleQueue' objects>",
+      "seconds": 0.0005808,
+      "cumulative_seconds": 0.5471546,
+      "calls": 44
+    },
+    {
+      "file": "_base.py",
+      "line": 646,
+      "function": "__exit__",
+      "seconds": 4.000000000000001e-06,
+      "cumulative_seconds": 0.5458134,
+      "calls": 1
+    },
+    {
+      "file": "thread.py",
+      "line": 220,
+      "function": "shutdown",
+      "seconds": 1.1700000000000001e-05,
+      "cumulative_seconds": 0.5458094,
+      "calls": 1
+    },
+    {
+      "file": "ast.py",
+      "line": 418,
+      "function": "visit",
+      "seconds": 0.0319507,
+      "cumulative_seconds": 0.5456076000000001,
+      "calls": 59507
+    },
+    {
+      "file": "thread.py",
+      "line": 70,
+      "function": "_worker",
+      "seconds": 3.48e-05,
+      "cumulative_seconds": 0.543709,
+      "calls": 4
+    },
+    {
+      "file": "ast.py",
+      "line": 424,
+      "function": "generic_visit",
+      "seconds": 0.032021600000000004,
+      "cumulative_seconds": 0.5308006000000001,
+      "calls": 28088
+    },
+    {
+      "file": "thread.py",
+      "line": 54,
+      "function": "run",
+      "seconds": 0.00038720000000000003,
+      "cumulative_seconds": 0.46223270000000005,
+      "calls": 70
+    },
+    {
+      "file": "parser.py",
+      "line": 157,
+      "function": "visit_FunctionDef",
+      "seconds": 0.0108409,
+      "cumulative_seconds": 0.44967480000000004,
+      "calls": 1272
+    },
+    {
+      "file": "indexer.py",
+      "line": 171,
+      "function": "_parse_entry",
+      "seconds": 0.0042166,
+      "cumulative_seconds": 0.3810391,
+      "calls": 70
+    },
+    {
+      "file": "parser.py",
+      "line": 38,
+      "function": "parse",
+      "seconds": 0.0008499,
+      "cumulative_seconds": 0.3794348,
+      "calls": 70
+    }
+  ]
+}

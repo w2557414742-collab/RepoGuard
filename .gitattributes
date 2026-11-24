@@ -1,0 +1,2 @@
+# Preserve the exact bytes and blank context lines of experimental patches.
+/artifacts/*.patch -text whitespace=-trailing-space

@@ -1,0 +1,11 @@
+rules:
+  - name: domain-dependencies
+    source: app.domain
+    forbidden_dependency: app.api
+  - name: module-cycles
+    kind: cycles
+    source: app
+  - name: domain-private-imports
+    kind: public_api
+    source: app.api
+    forbidden_dependency: app.domain

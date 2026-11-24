@@ -1,0 +1,344 @@
+{
+  "repository": "https://github.com/pallets/click",
+  "base": "c23223b13c847ae472faa258907ffb5c27b504fa",
+  "target": "934813e4d421071a1b3db3973c02fe2721359a6e",
+  "environment": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "logical_cpus": 20,
+    "parser_threads": 4
+  },
+  "image": "sha256:18ec23ad8d7b6142bb0e94d79ef4cce88315f8860860e637f40ff94a30f1e1e2",
+  "snapshot": {
+    "file_status": {
+      "indexed": 70,
+      "unsupported": 77
+    },
+    "python_lines": 17829,
+    "symbols": 5451,
+    "edges": 33202,
+    "edge_confidence": {
+      "RESOLVED": 14481,
+      "UNRESOLVED": 11200,
+      "POSSIBLE": 7521
+    },
+    "test_symbols": 321
+  },
+  "release_index": {
+    "full": {
+      "seconds": [
+        0.5381583999842405,
+        0.5437367000849918,
+        0.6482363000977784
+      ],
+      "median_seconds": 0.5437367000849918,
+      "peak_traced_bytes": 12260499,
+      "parsed_files": 70,
+      "resolved_files": 70,
+      "cold_definition_seconds": 0.04064970009494573,
+      "consistency": {
+        "files": true,
+        "symbols": true,
+        "edges": true,
+        "footprints": true,
+        "query": true,
+        "version": true
+      }
+    },
+    "file": {
+      "seconds": [
+        0.6527658000122756,
+        0.5613857000134885,
+        0.5443877999205142
+      ],
+      "median_seconds": 0.5613857000134885,
+      "peak_traced_bytes": 36316921,
+      "parsed_files": 1,
+      "resolved_files": 70,
+      "cold_definition_seconds": 0.03858649998437613,
+      "consistency": {
+        "files": true,
+        "symbols": true,
+        "edges": true,
+        "footprints": true,
+        "query": true,
+        "version": true
+      }
+    },
+    "dependency": {
+      "seconds": [
+        0.47372589993756264,
+        0.5631270000012591,
+        0.506356899975799
+      ],
+      "median_seconds": 0.506356899975799,
+      "peak_traced_bytes": 34486222,
+      "parsed_files": 1,
+      "resolved_files": 41,
+      "cold_definition_seconds": 0.03838220005854964,
+      "consistency": {
+        "files": true,
+        "symbols": true,
+        "edges": true,
+        "footprints": true,
+        "query": true,
+        "version": true
+      }
+    }
+  },
+  "controlled_index": {
+    "full": {
+      "seconds": [
+        0.5097942999564111,
+        0.591182200005278,
+        0.5280942000681534
+      ],
+      "median_seconds": 0.5280942000681534,
+      "peak_traced_bytes": 14129556,
+      "parsed_files": 70,
+      "resolved_files": 70,
+      "cold_definition_seconds": 0.03860769991297275,
+      "consistency": {
+        "files": true,
+        "symbols": true,
+        "edges": true,
+        "footprints": true,
+        "query": true,
+        "version": true
+      }
+    },
+    "file": {
+      "seconds": [
+        0.5274232000811026,
+        0.5382415000349283,
+        0.5946854000212625
+      ],
+      "median_seconds": 0.5382415000349283,
+      "peak_traced_bytes": 36686106,
+      "parsed_files": 1,
+      "resolved_files": 70,
+      "cold_definition_seconds": 0.03922729997429997,
+      "consistency": {
+        "files": true,
+        "symbols": true,
+        "edges": true,
+        "footprints": true,
+        "query": true,
+        "version": true
+      }
+    },
+    "dependency": {
+      "seconds": [
+        0.47938140004407614,
+        0.40124359994661063,
+        0.3964559000451118
+      ],
+      "median_seconds": 0.40124359994661063,
+      "peak_traced_bytes": 33131855,
+      "parsed_files": 1,
+      "resolved_files": 6,
+      "cold_definition_seconds": 0.038276199949905276,
+      "consistency": {
+        "files": true,
+        "symbols": true,
+        "edges": true,
+        "footprints": true,
+        "query": true,
+        "version": true
+      }
+    }
+  },
+  "baseline_pytest": {
+    "status": "passed",
+    "seconds": 2.6703462000004947,
+    "collected": 650,
+    "summary": "628 passed, 21 skipped, 1 xfailed in 1.80s"
+  },
+  "independent_full_mutant": {
+    "commit": "204e0e2b1c285702937264317b9ac6838120f394",
+    "seconds": 1.649371900013648,
+    "collected": 650,
+    "failures": [
+      "tests/test_arguments.py::test_nested_subcommand_help",
+      "tests/test_arguments.py::test_subcommand_help",
+      "tests/test_basic.py::test_basic_functionality",
+      "tests/test_basic.py::test_basic_group",
+      "tests/test_basic.py::test_choice_argument",
+      "tests/test_basic.py::test_choice_option",
+      "tests/test_basic.py::test_datetime_option_default",
+      "tests/test_basic.py::test_help_invalid_default",
+      "tests/test_basic.py::test_hidden_command",
+      "tests/test_basic.py::test_hidden_group",
+      "tests/test_basic.py::test_hidden_option",
+      "tests/test_basic.py::test_summary_line",
+      "tests/test_chain.py::test_chaining_help[args0-COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...]",
+      "tests/test_chain.py::test_chaining_help[args1-ROOT HELP]",
+      "tests/test_chain.py::test_chaining_help[args2-SDIST HELP]",
+      "tests/test_chain.py::test_chaining_help[args3-BDIST HELP]",
+      "tests/test_chain.py::test_chaining_help[args4-SDIST HELP]",
+      "tests/test_commands.py::test_aliased_command_canonical_name",
+      "tests/test_commands.py::test_auto_shorthelp",
+      "tests/test_commands.py::test_deprecated_in_help_messages[CLI HELP]",
+      "tests/test_commands.py::test_deprecated_in_help_messages[None]",
+      "tests/test_commands.py::test_group_with_args[args1-0-Show this message and exit.]",
+      "tests/test_commands.py::test_group_with_args[args3-0-Show this message and exit.]",
+      "tests/test_commands.py::test_help_param_priority",
+      "tests/test_commands.py::test_no_args_is_help",
+      "tests/test_context.py::test_propagate_show_default_setting",
+      "tests/test_custom_classes.py::test_context_formatter_class",
+      "tests/test_defaults.py::test_flag_default_map",
+      "tests/test_formatting.py::test_basic_functionality",
+      "tests/test_formatting.py::test_formatting_custom_type_metavar",
+      "tests/test_formatting.py::test_formatting_empty_help_lines",
+      "tests/test_formatting.py::test_formatting_with_options_metavar_empty",
+      "tests/test_formatting.py::test_global_show_default",
+      "tests/test_formatting.py::test_truncating_docstring",
+      "tests/test_formatting.py::test_truncating_docstring_no_help",
+      "tests/test_formatting.py::test_wrapping_long_command_name",
+      "tests/test_formatting.py::test_wrapping_long_options_strings",
+      "tests/test_options.py::test_counting",
+      "tests/test_options.py::test_dynamic_default_help_text",
+      "tests/test_options.py::test_dynamic_default_help_unset",
+      "tests/test_options.py::test_multiple_default_help",
+      "tests/test_options.py::test_option_custom_class",
+      "tests/test_options.py::test_option_custom_class_reusable",
+      "tests/test_options.py::test_option_help_preserve_paragraphs",
+      "tests/test_options.py::test_prefixes",
+      "tests/test_options.py::test_show_default_default_map",
+      "tests/test_options.py::test_show_envvar",
+      "tests/test_options.py::test_show_envvar_auto_prefix",
+      "tests/test_options.py::test_show_envvar_auto_prefix_dash_in_command",
+      "tests/test_options.py::test_winstyle_options"
+    ]
+  },
+  "selection": {
+    "file": {
+      "metrics": {
+        "failing_test_recall": 0.0,
+        "selection_ratio": 0.0,
+        "missed_failures": [
+          "tests/test_arguments.py::test_nested_subcommand_help",
+          "tests/test_arguments.py::test_subcommand_help",
+          "tests/test_basic.py::test_basic_functionality",
+          "tests/test_basic.py::test_basic_group",
+          "tests/test_basic.py::test_choice_argument",
+          "tests/test_basic.py::test_choice_option",
+          "tests/test_basic.py::test_datetime_option_default",
+          "tests/test_basic.py::test_help_invalid_default",
+          "tests/test_basic.py::test_hidden_command",
+          "tests/test_basic.py::test_hidden_group",
+          "tests/test_basic.py::test_hidden_option",
+          "tests/test_basic.py::test_summary_line",
+          "tests/test_chain.py::test_chaining_help[args0-COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...]",
+          "tests/test_chain.py::test_chaining_help[args1-ROOT HELP]",
+          "tests/test_chain.py::test_chaining_help[args2-SDIST HELP]",
+          "tests/test_chain.py::test_chaining_help[args3-BDIST HELP]",
+          "tests/test_chain.py::test_chaining_help[args4-SDIST HELP]",
+          "tests/test_commands.py::test_aliased_command_canonical_name",
+          "tests/test_commands.py::test_auto_shorthelp",
+          "tests/test_commands.py::test_deprecated_in_help_messages[CLI HELP]",
+          "tests/test_commands.py::test_deprecated_in_help_messages[None]",
+          "tests/test_commands.py::test_group_with_args[args1-0-Show this message and exit.]",
+          "tests/test_commands.py::test_group_with_args[args3-0-Show this message and exit.]",
+          "tests/test_commands.py::test_help_param_priority",
+          "tests/test_commands.py::test_no_args_is_help",
+          "tests/test_context.py::test_propagate_show_default_setting",
+          "tests/test_custom_classes.py::test_context_formatter_class",
+          "tests/test_defaults.py::test_flag_default_map",
+          "tests/test_formatting.py::test_basic_functionality",
+          "tests/test_formatting.py::test_formatting_custom_type_metavar",
+          "tests/test_formatting.py::test_formatting_empty_help_lines",
+          "tests/test_formatting.py::test_formatting_with_options_metavar_empty",
+          "tests/test_formatting.py::test_global_show_default",
+          "tests/test_formatting.py::test_truncating_docstring",
+          "tests/test_formatting.py::test_truncating_docstring_no_help",
+          "tests/test_formatting.py::test_wrapping_long_command_name",
+          "tests/test_formatting.py::test_wrapping_long_options_strings",
+          "tests/test_options.py::test_counting",
+          "tests/test_options.py::test_dynamic_default_help_text",
+          "tests/test_options.py::test_dynamic_default_help_unset",
+          "tests/test_options.py::test_multiple_default_help",
+          "tests/test_options.py::test_option_custom_class",
+          "tests/test_options.py::test_option_custom_class_reusable",
+          "tests/test_options.py::test_option_help_preserve_paragraphs",
+          "tests/test_options.py::test_prefixes",
+          "tests/test_options.py::test_show_default_default_map",
+          "tests/test_options.py::test_show_envvar",
+          "tests/test_options.py::test_show_envvar_auto_prefix",
+          "tests/test_options.py::test_show_envvar_auto_prefix_dash_in_command",
+          "tests/test_options.py::test_winstyle_options"
+        ],
+        "speedup": null,
+        "fallback": false
+      },
+      "status": "no_tests_selected",
+      "seconds": 0,
+      "collected": 0,
+      "reasons": []
+    },
+    "static": {
+      "metrics": {
+        "failing_test_recall": 1.0,
+        "selection_ratio": 0.9969230769230769,
+        "missed_failures": [],
+        "speedup": 1.0233359185076418,
+        "fallback": false
+      },
+      "status": "failed",
+      "seconds": 1.6117599999997765,
+      "collected": 648,
+      "reasons": []
+    },
+    "coverage": {
+      "metrics": {
+        "failing_test_recall": 1.0,
+        "selection_ratio": 0.9646153846153847,
+        "missed_failures": [],
+        "speedup": 0.9954148217868903,
+        "fallback": false
+      },
+      "status": "failed",
+      "seconds": 1.6569694000063464,
+      "collected": 627,
+      "reasons": []
+    },
+    "hybrid": {
+      "metrics": {
+        "failing_test_recall": 1.0,
+        "selection_ratio": 1.0,
+        "missed_failures": [],
+        "speedup": 1.0133511005855347,
+        "fallback": true
+      },
+      "status": "failed",
+      "seconds": 1.6276410999707878,
+      "collected": 650,
+      "reasons": [
+        "import or collection code ran outside a test context",
+        "subprocess coverage and shared fixture attribution are incomplete",
+        "unresolved calls in the impact subgraph"
+      ]
+    }
+  },
+  "refactoring": {
+    "text": {
+      "commit": "db0cefc3b1593cc718c71882b59dd4485e7e76f4",
+      "status": "passed",
+      "success": true,
+      "validation_seconds": 1.3602496000239626
+    },
+    "libcst": {
+      "commit": "db0cefc3b1593cc718c71882b59dd4485e7e76f4",
+      "status": "passed",
+      "success": true,
+      "validation_seconds": 1.3557401000289246
+    },
+    "verified": {
+      "commit": "db0cefc3b1593cc718c71882b59dd4485e7e76f4",
+      "status": "passed",
+      "success": true,
+      "validation_seconds": 1.4856836000690237
+    }
+  }
+}

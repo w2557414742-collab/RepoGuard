@@ -1,0 +1,187 @@
+RepoGuard/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── artifacts/
+│   ├── release-checks/
+│   │   ├── bandit.json
+│   │   ├── cli-help.log
+│   │   ├── click-rerun.json
+│   │   ├── frontend-build.log
+│   │   ├── http.log
+│   │   ├── mypy.log
+│   │   ├── pip-check.log
+│   │   ├── pytest.log
+│   │   ├── results.json
+│   │   └── ruff.log
+│   ├── click-baseline-coverage.json.gz
+│   ├── click-dynamic.json
+│   ├── click-iter-rows.patch
+│   ├── click-mutant-impact.md
+│   ├── click-profile.json
+│   ├── click-release-impact.md
+│   ├── click-static.json
+│   ├── risk-contracts.json
+│   └── source-provenance.json
+├── benchmarks/
+│   ├── contracts/
+│   │   └── risk_contracts.py
+│   ├── ground_truth/
+│   │   └── click-8.1.8.json
+│   └── run_click.py
+├── configs/
+│   └── architecture.example.yml
+├── docs/
+│   ├── learning/
+│   │   ├── 00_project_learning_map.md
+│   │   ├── 00_project_overview.md
+│   │   ├── 01_repository_indexing.md
+│   │   ├── 01_repository_management.md
+│   │   ├── 02_ast_and_tree_sitter.md
+│   │   ├── 02_python_ast.md
+│   │   ├── 03_symbol_table.md
+│   │   ├── 03_tree_sitter.md
+│   │   ├── 04_scope_resolution.md
+│   │   ├── 04_symbol_table.md
+│   │   ├── 05_cross_file_resolution.md
+│   │   ├── 05_scope_resolution.md
+│   │   ├── 06_call_graph.md
+│   │   ├── 06_cross_file_reference.md
+│   │   ├── 07_call_graph.md
+│   │   ├── 07_graph_algorithms.md
+│   │   ├── 08_dependency_graph.md
+│   │   ├── 08_incremental_indexing.md
+│   │   ├── 09_code_chunking.md
+│   │   ├── 09_code_retrieval.md
+│   │   ├── 10_bm25.md
+│   │   ├── 10_change_impact_analysis.md
+│   │   ├── 11_code_embedding.md
+│   │   ├── 11_test_impact_analysis.md
+│   │   ├── 12_faiss_and_hybrid_search.md
+│   │   ├── 12_libcst_refactoring.md
+│   │   ├── 13_architecture_guard.md
+│   │   ├── 13_graph_algorithms.md
+│   │   ├── 14_git_diff_analysis.md
+│   │   ├── 14_mutation_testing.md
+│   │   ├── 15_change_impact_analysis.md
+│   │   ├── 15_contract_checking.md
+│   │   ├── 16_benchmark_design.md
+│   │   ├── 16_incremental_indexing.md
+│   │   ├── 17_cache_invalidation.md
+│   │   ├── 17_mcp_integration.md
+│   │   ├── 18_interview_questions.md
+│   │   ├── 18_test_impact_analysis.md
+│   │   ├── 19_coverage_analysis.md
+│   │   ├── 20_libcst_and_codemod.md
+│   │   ├── 21_verified_refactoring.md
+│   │   ├── 22_static_analysis.md
+│   │   ├── 23_regression_validation.md
+│   │   ├── 24_benchmark_evaluation.md
+│   │   ├── 25_api_sdk_and_mcp.md
+│   │   ├── 26_docker_deployment.md
+│   │   └── 27_interview_preparation.md
+│   ├── research/
+│   │   └── related_work.md
+│   └── environment.md
+├── frontend/
+│   ├── src/
+│   │   ├── App.vue
+│   │   ├── BenchmarkChart.vue
+│   │   ├── DependencyGraph.vue
+│   │   ├── main.ts
+│   │   ├── SourceEditor.vue
+│   │   ├── style.css
+│   │   └── types.ts
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── vite.config.ts
+├── infra/
+│   ├── api.Dockerfile
+│   ├── frontend.Dockerfile
+│   ├── nginx.conf
+│   ├── runner.Dockerfile
+│   ├── runner_entry.py
+│   └── service_entry.py
+├── scripts/
+│   ├── demo.ps1
+│   ├── generate_source_guide.py
+│   ├── package_audit.py
+│   ├── profile_index.py
+│   ├── research_sources.py
+│   ├── smoke_http.py
+│   └── verify_contracts.py
+├── src/
+│   └── repoguard/
+│       ├── __init__.py
+│       ├── api.py
+│       ├── architecture.py
+│       ├── cli.py
+│       ├── graph.py
+│       ├── impact.py
+│       ├── import_migration.py
+│       ├── indexer.py
+│       ├── mcp_server.py
+│       ├── model.py
+│       ├── parser.py
+│       ├── pytest_coverage.py
+│       ├── refactoring.py
+│       ├── repository.py
+│       ├── resolution.py
+│       ├── retrieval.py
+│       ├── sandbox.py
+│       ├── sdk.py
+│       ├── store.py
+│       ├── test_selection.py
+│       └── verification.py
+├── tests/
+│   ├── e2e/
+│   │   ├── test_cli.py
+│   │   └── test_transports.py
+│   ├── integration/
+│   │   ├── test_index_and_impact.py
+│   │   └── test_refactoring.py
+│   ├── unit/
+│   │   ├── test_parser.py
+│   │   └── test_sandbox_io.py
+│   └── conftest.py
+├── .dockerignore
+├── .env.example
+├── .gitattributes
+├── .gitignore
+├── AGENTS.md
+├── ARCHITECTURE.md
+├── BENCHMARK_PROTOCOL.md
+├── CALL_FLOW.md
+├── CHANGELOG.md
+├── CHATGPT_HANDOFF.md
+├── CODE_GRAPH_DESIGN.md
+├── compose.yml
+├── DEVELOPMENT_PLAN.md
+├── EXPERIMENT_REPORT.md
+├── FAILURE_ANALYSIS.md
+├── FILE_GUIDE.md
+├── FUNCTION_REFERENCE.md
+├── GITHUB_PUBLISH_REPORT.md
+├── HANDOFF.md
+├── IMPACT_ANALYSIS_DESIGN.md
+├── INCREMENTAL_INDEXING_DESIGN.md
+├── INDEX_DESIGN.md
+├── LICENSE
+├── PACKAGE_AUDIT.md
+├── PROJECT_STATUS.md
+├── PROJECT_STRUCTURE.md
+├── PROJECT_TREE.txt
+├── pyproject.toml
+├── README.en.md
+├── README.md
+├── REFACTORING_DESIGN.md
+├── RESUME_HIGHLIGHTS.md
+├── SECURITY.md
+├── SECURITY_AUDIT.md
+├── SYMBOL_RESOLUTION_DESIGN.md
+├── TEST_IMPACT_DESIGN.md
+├── TEST_REPORT.md
+├── THIRD_PARTY_NOTICES
+└── WINDOWS_QUICKSTART.md

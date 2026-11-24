@@ -1,0 +1,40 @@
+{
+  "pytest": {
+    "exit": 0,
+    "seconds": 19.663,
+    "log": "artifacts/release-checks/pytest.log"
+  },
+  "ruff": {
+    "exit": 0,
+    "seconds": 0.088,
+    "log": "artifacts/release-checks/ruff.log"
+  },
+  "mypy": {
+    "exit": 1,
+    "seconds": 0.589,
+    "log": "artifacts/release-checks/mypy.log"
+  },
+  "pip-check": {
+    "exit": 0,
+    "seconds": 1.619,
+    "log": "artifacts/release-checks/pip-check.log"
+  },
+  "cli-help": {
+    "exit": 0,
+    "seconds": 0.485,
+    "log": "artifacts/release-checks/cli-help.log"
+  },
+  "http": {
+    "exit": 0,
+    "seconds": 6.36,
+    "log": "artifacts/release-checks/http.log"
+  },
+  "frontend-build": {
+    "exit": 0,
+    "seconds": 17.248,
+    "log": "artifacts/release-checks/frontend-build.log"
+  },
+  "executable_ast": {
+    "unchanged": 21
+  }
+}

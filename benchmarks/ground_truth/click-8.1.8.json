@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/pallets/click",
+  "base": "c23223b13c847ae472faa258907ffb5c27b504fa",
+  "target": "934813e4d421071a1b3db3973c02fe2721359a6e",
+  "navigation": [
+    {"query": "click.formatting.measure_table", "definition": ["src/click/formatting.py", 12], "references": [["src/click/formatting.py", 225]]},
+    {"query": "click.formatting.iter_rows", "definition": ["src/click/formatting.py", 22], "references": [["src/click/formatting.py", 231]]},
+    {"query": "click.core.Context", "definition": ["src/click/core.py", 169], "references": null},
+    {"query": "click.core.Context.get_usage", "definition": ["src/click/core.py", 701], "references": null}
+  ],
+  "mutation": {"path": "src/click/formatting.py", "line": "    return tuple(y for x, y in sorted(widths.items()))", "regression": "    return (0,)", "control": "    return tuple(value for _, value in sorted(widths.items()))"},
+  "manual_impact": ["src/click/formatting.py", "src/click/core.py"],
+  "rename": {"query": "click.formatting.iter_rows", "new_name": "aligned_rows", "edited_lines": [["src/click/formatting.py", 22], ["src/click/formatting.py", 231]]}
+}

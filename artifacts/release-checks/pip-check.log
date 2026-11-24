@@ -1,0 +1,3 @@
+command: python.exe -m pip check
+exit: 0
+No broken requirements found.

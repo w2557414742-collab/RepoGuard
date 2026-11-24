@@ -1,0 +1,18 @@
+command: python.exe -m repoguard.cli --help
+exit: 0
+usage: repoguard [-h] [--repo REPO] [--db DB] [--root ROOTS]
+                 [--workers WORKERS]
+                 {index,search,definition,references,callers,callees,graph,plan,impact,select-tests,architecture,run-tests,move-module,validate-patch} ...
+
+positional arguments:
+  {index,search,definition,references,callers,callees,graph,plan,impact,select-tests,architecture,run-tests,move-module,validate-patch}
+    index               build or load a commit index
+    run-tests           run an explicit isolated pytest session
+    move-module         preview a module move and import rewrite
+
+options:
+  -h, --help            show this help message and exit
+  --repo REPO
+  --db DB
+  --root ROOTS
+  --workers WORKERS

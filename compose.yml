@@ -1,0 +1,48 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: infra/api.Dockerfile
+    environment:
+      REPOGUARD_BASE: ${REPOGUARD_BASE:-HEAD~1}
+      REPOGUARD_TARGET: ${REPOGUARD_TARGET:-HEAD}
+      REPOGUARD_WRITE_TOKEN: ${REPOGUARD_WRITE_TOKEN:-}
+      REPOGUARD_RULES: /config/architecture.example.yml
+      REPOGUARD_BENCHMARK: /benchmarks/click-static.json
+    volumes:
+      - type: bind
+        source: ${REPOGUARD_REPOSITORY:-./.benchmark/click-full}
+        target: /target
+        read_only: true
+      - type: bind
+        source: ./configs
+        target: /config
+        read_only: true
+      - type: bind
+        source: ./artifacts
+        target: /benchmarks
+        read_only: true
+      - index:/index
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/v1/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  frontend:
+    build:
+      context: .
+      dockerfile: infra/frontend.Dockerfile
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${REPOGUARD_PORT:-8080}:80"
+volumes:
+  index:
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: ${REPOGUARD_SUBNET:-10.203.117.0/28}

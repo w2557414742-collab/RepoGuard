@@ -1,0 +1,106 @@
+[
+  {
+    "repository": "https://github.com/tree-sitter/tree-sitter",
+    "tag": "v0.27.2",
+    "commit": "3fb7be49145acfb07e33b61ed5689e2b6771b2e9",
+    "source": "https://github.com/tree-sitter/tree-sitter/blob/3fb7be49145acfb07e33b61ed5689e2b6771b2e9/lib/src/parser.c",
+    "source_lines": 2315,
+    "license_source": "https://github.com/tree-sitter/tree-sitter/blob/3fb7be49145acfb07e33b61ed5689e2b6771b2e9/LICENSE"
+  },
+  {
+    "repository": "https://github.com/joernio/joern",
+    "tag": "v4.0.690",
+    "commit": "911e53790745c04e1ae1b1f969c917e59e6fa325",
+    "source": "https://github.com/joernio/joern/blob/911e53790745c04e1ae1b1f969c917e59e6fa325/semanticcpg/src/main/scala/io/shiftleft/semanticcpg/language/package.scala",
+    "source_lines": 321,
+    "license_source": "https://github.com/joernio/joern/blob/911e53790745c04e1ae1b1f969c917e59e6fa325/LICENSE"
+  },
+  {
+    "repository": "https://github.com/github/codeql",
+    "tag": "codeql-cli/v2.21.4",
+    "commit": "d72c766a4938b9a3e6d7c26728f9a611b539422c",
+    "source": "https://github.com/github/codeql/blob/d72c766a4938b9a3e6d7c26728f9a611b539422c/python/ql/lib/semmle/python/dataflow/new/DataFlow.qll",
+    "source_lines": 29,
+    "license_source": "https://github.com/github/codeql/blob/d72c766a4938b9a3e6d7c26728f9a611b539422c/LICENSE"
+  },
+  {
+    "repository": "https://github.com/scip-code/scip",
+    "tag": "v0.10.0",
+    "commit": "1c2b6db7e560d5233c944f36e4ac1377cc6963fc",
+    "source": "https://github.com/scip-code/scip/blob/1c2b6db7e560d5233c944f36e4ac1377cc6963fc/scip.proto",
+    "source_lines": 962,
+    "license_source": "https://github.com/scip-code/scip/blob/1c2b6db7e560d5233c944f36e4ac1377cc6963fc/LICENSE"
+  },
+  {
+    "repository": "https://github.com/microsoft/pyright",
+    "tag": "1.1.400",
+    "commit": "890401e4cfd2a39429af0155beec0c4c7ba31d2d",
+    "source": "https://github.com/microsoft/pyright/blob/890401e4cfd2a39429af0155beec0c4c7ba31d2d/packages/pyright-internal/src/analyzer/binder.ts",
+    "source_lines": 4409,
+    "license_source": "https://github.com/microsoft/pyright/blob/890401e4cfd2a39429af0155beec0c4c7ba31d2d/LICENSE.txt"
+  },
+  {
+    "repository": "https://github.com/Instagram/LibCST",
+    "tag": "v1.9.0",
+    "commit": "c029c17bf45a3737fc8d1347001ab2422f42ae58",
+    "source": "https://github.com/Instagram/LibCST/blob/c029c17bf45a3737fc8d1347001ab2422f42ae58/libcst/metadata/scope_provider.py",
+    "source_lines": 1254,
+    "license_source": "https://github.com/Instagram/LibCST/blob/c029c17bf45a3737fc8d1347001ab2422f42ae58/LICENSE"
+  },
+  {
+    "repository": "https://github.com/ast-grep/ast-grep",
+    "tag": "0.51.3",
+    "commit": "22d84c44939dd93a128d2b29fd860563d86d4d92",
+    "source": "https://github.com/ast-grep/ast-grep/blob/22d84c44939dd93a128d2b29fd860563d86d4d92/crates/core/src/matcher/pattern.rs",
+    "source_lines": 770,
+    "license_source": "https://github.com/ast-grep/ast-grep/blob/22d84c44939dd93a128d2b29fd860563d86d4d92/LICENSE"
+  },
+  {
+    "repository": "https://github.com/Aider-AI/aider",
+    "tag": "v0.86.3.dev",
+    "commit": "7a1bd15f0c78160129c3b7ffc5ffc94bd992bbbe",
+    "source": "https://github.com/Aider-AI/aider/blob/7a1bd15f0c78160129c3b7ffc5ffc94bd992bbbe/aider/repomap.py",
+    "source_lines": 867,
+    "license_source": "https://github.com/Aider-AI/aider/blob/7a1bd15f0c78160129c3b7ffc5ffc94bd992bbbe/LICENSE.txt"
+  },
+  {
+    "repository": "https://github.com/coveragepy/coveragepy",
+    "tag": "7.8.2",
+    "commit": "51ab2e503faebf7b302850f0b0329103f0efd1f4",
+    "source": "https://github.com/coveragepy/coveragepy/blob/51ab2e503faebf7b302850f0b0329103f0efd1f4/coverage/control.py",
+    "source_lines": 1440,
+    "license_source": "https://github.com/coveragepy/coveragepy/blob/51ab2e503faebf7b302850f0b0329103f0efd1f4/LICENSE.txt"
+  },
+  {
+    "repository": "https://github.com/tarpas/pytest-testmon",
+    "tag": "v2.3.1",
+    "commit": "c3fbdce2a86954d76c2c316b260af84153b9175b",
+    "source": "https://github.com/tarpas/pytest-testmon/blob/c3fbdce2a86954d76c2c316b260af84153b9175b/testmon/pytest_testmon.py",
+    "source_lines": 612,
+    "license_source": "https://github.com/tarpas/pytest-testmon/blob/c3fbdce2a86954d76c2c316b260af84153b9175b/LICENSE"
+  },
+  {
+    "repository": "https://github.com/boxed/mutmut",
+    "tag": "3.8.1",
+    "commit": "41353df71526c8309e77521b9342a539dd434479",
+    "source": "https://github.com/boxed/mutmut/blob/41353df71526c8309e77521b9342a539dd434479/src/mutmut/__main__.py",
+    "source_lines": 1139,
+    "license_source": "https://github.com/boxed/mutmut/blob/41353df71526c8309e77521b9342a539dd434479/LICENSE"
+  },
+  {
+    "repository": "https://github.com/pschanely/CrossHair",
+    "tag": "v0.0.114",
+    "commit": "0b39c5bc3b02478f49cbe046df0d09f15101dcf4",
+    "source": "https://github.com/pschanely/CrossHair/blob/0b39c5bc3b02478f49cbe046df0d09f15101dcf4/crosshair/core.py",
+    "source_lines": 2056,
+    "license_source": "https://github.com/pschanely/CrossHair/blob/0b39c5bc3b02478f49cbe046df0d09f15101dcf4/LICENSE"
+  },
+  {
+    "repository": "https://github.com/HypothesisWorks/hypothesis",
+    "tag": "v6.131.0",
+    "commit": "049d0751b2ceebc2fe915df37cea6b587d475865",
+    "source": "https://github.com/HypothesisWorks/hypothesis/blob/049d0751b2ceebc2fe915df37cea6b587d475865/hypothesis-python/src/hypothesis/core.py",
+    "source_lines": 1986,
+    "license_source": "https://github.com/HypothesisWorks/hypothesis/blob/049d0751b2ceebc2fe915df37cea6b587d475865/LICENSE.txt"
+  }
+]
