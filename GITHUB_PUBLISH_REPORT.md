@@ -1,5 +1,13 @@
 # GitHub 私有仓库发布登记
 
+## 2026-11-25 源码归档复核
+
+GitHub API 查询发现仓库为 Public。核对账号、仓库 ID、管理与推送权限及 `main` 历史后，使用已有仓库恢复 Private。变更前 GitHub 报告无分叉、星标、订阅者和 Pages。变更后本地与远端仍同为 `289874102a6c515b429148679e0ecaee022bce8c`，默认分支为 `main`。GitHub 文件树的 165 个路径、模式和对象 SHA 均与本地一致。GitHub README API 成功返回渲染后的 HTML。 [仓库](https://github.com/w2557414742-collab/RepoGuard) [README](https://github.com/w2557414742-collab/RepoGuard/blob/main/README.md)
+
+该提交的 Python 3.11、Python 3.13 和 frontend 作业全部成功。与首次发布的差异只涉及四份交付文档。Gitleaks 复扫归档前的三个可达提交，发现数为 0。Bandit 的五项中等级发现经源码复核，涉及容器临时路径、服务监听和两个维护脚本的 URL 读取，未发现需要阻止此次私有发布的情况。 [托管 CI](https://github.com/w2557414742-collab/RepoGuard/actions/runs/45423996129) [安全审计](SECURITY_AUDIT.md) [测试报告](TEST_REPORT.md)
+
+供离线审查的 `RepoGuard-source.zip` 从包含本轮交付文档的发布提交用 `git archive` 生成，保留完整的 Git 跟踪文件。ZIP 注释记录归档提交，交付时核对该提交、文件内容、CRC 和 ZIP 的 SHA-256。 [离线审查入口](CHATGPT_HANDOFF.md) [main 分支](https://github.com/w2557414742-collab/RepoGuard/commits/main/)
+
 ## 正式发布验收
 
 | 验收项 | 2026-11-24 状态 |

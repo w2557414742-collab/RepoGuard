@@ -2,6 +2,8 @@
 
 截至 2026-11-24，主路径覆盖 Python Git 快照、索引和增量更新、图与影响报告、Docker 测试选择、LibCST 补丁和本地平台。可从 [README](README.md) 运行。环境、评测和复现分别记录在 [环境审计](docs/environment.md)、[实验报告](EXPERIMENT_REPORT.md) 与 [实验协议](BENCHMARK_PROTOCOL.md)。
 
+2026-11-25 复核了私库权限、Git 历史、文件树和已有测试记录。本轮更新交付文档并从发布提交生成离线源码包。 [发布登记](GITHUB_PUBLISH_REPORT.md) [源码归档入口](CHATGPT_HANDOFF.md)
+
 本地服务入口为 [RepoGuard Explorer](http://127.0.0.1:8080)。Click 的两个实际快照保存在当前工作区的 `.repoguard/click.sqlite`，文件以仓库路径及解释器版本定位。验收见 [测试报告](TEST_REPORT.md)。
 
 | 阶段 | 已验证交付 | 下一步 |
@@ -52,7 +54,7 @@
 | 交付 | GitHub Actions 配置与托管运行 | VERIFIED | 已发布源码基线触发的 Python 3.11、Python 3.13 和 frontend 三个作业全部成功。[实际运行](https://github.com/w2557414742-collab/RepoGuard/actions/runs/45422632193) |
 | 交付 | PostgreSQL、Redis、数据库迁移体系 | NOT_IMPLEMENTED | SQLite DDL 随源码交付。 |
 | 交付 | SWE-RepairLab 联动 | NOT_IMPLEMENTED | 现有 SDK、REST 和 MCP 可作为将来接入点。 |
-| 发布 | GitHub 私有仓库与远端一致性 | VERIFIED | [w2557414742-collab/RepoGuard](https://github.com/w2557414742-collab/RepoGuard) 为 Private，默认分支 `main`。首次发布的 SHA 与 165 文件的 Git 树一致。 |
-| 发布 | ChatGPT 私库连接 | NOT_RUN | 仓库已建立，连接器授权及访问尚未核实。 |
+| 发布 | GitHub 私有仓库与远端一致性 | VERIFIED | 现有仓库已恢复 Private，默认分支 `main`。复核时本地与远端基线的 SHA 一致，165 个文件均匹配。 [仓库](https://github.com/w2557414742-collab/RepoGuard) [验收记录](GITHUB_PUBLISH_REPORT.md) |
+| 发布 | ChatGPT 私库连接 | BLOCKED | 当前连接器不可用，源码审查可用 ZIP 交接。 [离线审查入口](CHATGPT_HANDOFF.md) |
 
 证据入口为 [源码索引](FUNCTION_REFERENCE.md)、[测试报告](TEST_REPORT.md)、[实验报告](EXPERIMENT_REPORT.md) 与 [发布登记](GITHUB_PUBLISH_REPORT.md)。

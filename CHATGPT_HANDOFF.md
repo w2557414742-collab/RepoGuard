@@ -6,7 +6,8 @@ RepoGuard — Repository-Level Change Impact Analysis & Verified Refactoring Pla
 
 大型代码仓库变更影响分析与验证式自动重构平台。
 
-- [GitHub 私有仓库](https://github.com/w2557414742-collab/RepoGuard) 已发布，默认分支为 `main`。2026-11-24 发布且通过托管 CI 的源码基线为 `36e31b3f1574f925245bc08b2212ed948eda03b4`，原始本地审计基线 `46c03d33d7212f914575cfb715c8ee2ce3ca3fb1` 保留在其历史中。审阅时可固定到 [已发布源码树](https://github.com/w2557414742-collab/RepoGuard/tree/36e31b3f1574f925245bc08b2212ed948eda03b4)。连接器对仓库的访问需单独授权。 [发布状态](GITHUB_PUBLISH_REPORT.md)
+- 私有仓库的默认分支为 `main`。本轮归档前，已核对通过托管 CI 的源码基线 `289874102a6c515b429148679e0ecaee022bce8c`，首次发布提交 `36e31b3f1574f925245bc08b2212ed948eda03b4` 保留在历史中。 [GitHub 私有仓库](https://github.com/w2557414742-collab/RepoGuard) [源码基线](https://github.com/w2557414742-collab/RepoGuard/tree/289874102a6c515b429148679e0ecaee022bce8c) [发布状态](GITHUB_PUBLISH_REPORT.md)
+- 无法使用 GitHub 连接器时，可上传 `RepoGuard-source.zip` 审查。以 ZIP 注释中的 Git SHA 固定审查版本，从归档根目录的 `RepoGuard/CHATGPT_HANDOFF.md` 开始阅读。归档包含全部跟踪的源码、测试、课程和实验材料。 [文件清单](PROJECT_TREE.txt)
 - 目录包括 `src/repoguard`、`tests`、`frontend`、`infra`、`benchmarks`、`configs`、`scripts`、`artifacts` 和 `docs`。 [实际目录树](PROJECT_TREE.txt)
 - 先读 [README](README.md)，再看 [架构](ARCHITECTURE.md)、[文件入口](FILE_GUIDE.md)、[函数索引](FUNCTION_REFERENCE.md)、[调用关系](CALL_FLOW.md)。按 [28 节课程](docs/learning/00_project_overview.md) 从 Git 固定提交、AST 和作用域学到回归与部署。
 
@@ -20,7 +21,7 @@ RepoGuard — Repository-Level Change Impact Analysis & Verified Refactoring Pla
 
 ## 测试与基准
 
-本地 pytest 20 项通过，Ruff、依赖检查、HTTP 冒烟和前端构建通过。Mypy 34 项诊断及 Bandit 5 项中等级、43 项低等级发现仍待处理。Click 8.1.8 的全量和增量索引对照一致。GitHub 托管 CI 的 Python 3.11、Python 3.13 和 frontend 均通过。 [测试记录](TEST_REPORT.md) [实验与复现](BENCHMARK_PROTOCOL.md) [首轮托管 CI](https://github.com/w2557414742-collab/RepoGuard/actions/runs/45422632193)
+本地 pytest 20 项通过，Ruff、依赖检查、HTTP 冒烟和前端构建通过。Mypy 34 项诊断及 Bandit 5 项中等级、43 项低等级发现仍待处理。GitHub 托管 CI 的 Python 3.11、Python 3.13 和 frontend 均通过。Click 8.1.8 的两组全量与增量索引逐项一致。在该变体实验中，覆盖策略收集 627 个用例，覆盖独立全量执行所发现的全部 50 个失败，全量共收集 650 个用例。 [测试记录](TEST_REPORT.md) [实验结果](EXPERIMENT_REPORT.md) [基线托管 CI](https://github.com/w2557414742-collab/RepoGuard/actions/runs/45423996129)
 
 ## 待解决的工程问题
 

@@ -45,3 +45,11 @@ Mypy 和 Bandit 的发现单列，运行测试没有因此计为失败。 [安�
 | frontend | 通过，包括 npm ci、TypeScript 校验和生产构建。 |
 
 上述运行针对源码基线。仅交接文档的后续提交会产生独立运行，可按其 SHA 查看。Mypy 和 Bandit 保持表中的诊断结果，托管流水线的成功不改变这两项结论。 [main 的 Actions 记录](https://github.com/w2557414742-collab/RepoGuard/actions?query=branch%3Amain)
+
+## 2026-11-25 源码归档复核
+
+归档前版本为 `289874102a6c515b429148679e0ecaee022bce8c`。和首次 GitHub 发布提交比较，只修改了四份交付文档。该归档前版本的 Python 3.11、Python 3.13 和 frontend 作业均成功。 [托管 CI](https://github.com/w2557414742-collab/RepoGuard/actions/runs/45423996129)
+
+本轮使用 Windows Python 3.13.5 复跑 `python -m pytest -q --basetemp=.benchmark/archive-pytest`，20 项通过，14.08 秒。`python -m ruff check .` 与 `python scripts/generate_source_guide.py --check` 通过。Mypy 和 Bandit 仍以已验收的 34 项诊断及 5 项中等级、43 项低等级发现为准。
+
+复用此前的依赖检查、HTTP 冒烟、前端构建和 Click 报告。两组 Click 全量与增量索引一致性证据均保存于原报告。覆盖策略在本次 Click 变体中收集 627 个用例，覆盖独立全量收集的 650 个用例中观察到的全部 50 个失败。 [原始实验](EXPERIMENT_REPORT.md)
